@@ -12,20 +12,28 @@ main {
   border-radius: 20px;
 }
 
-.glider img {
-  padding: 8px;
-  max-height: 500px;
-  border-radius: 20px;
+.glider-slide {
+  display: flex;
+  /* allows centering */
+  justify-content: center;
+  /* center horizontally */
+  align-items: center;
+  /* center vertically */
+  padding: 0 10px;
+  /* spacing between slides */
   box-sizing: border-box;
 }
 
-.glider {
-  justify-content: center;
-  /* makes leftover slides sit centrally */
-}
-
-.glider-track {
-  justify-content: center;
+.glider-slide img {
+  max-height: 500px;
+  /* keeps them within a box */
+  max-width: 100%;
+  /* prevents overflow for wide images */
+  height: auto;
+  width: auto;
+  border: 2px solid #333;
+  border-radius: 20px;
+  display: block;
 }
 
 .project-card {
