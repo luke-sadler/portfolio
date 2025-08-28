@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<div class="project">
+  <h1>{{ page.title }}</h1>
+  {% if page.image %}
+  <img src="{{site.baseurl}}/{{ page.image }}" alt="{{ page.title }}">
+  {% endif %}
+
+  {% if page.appstore %}
+  <p><a href="{{ page.appstore }}" target="_blank">View on App Store</a></p>
+  {% endif %}
+
+  {% if page.github %}
+  <p><a href="{{ page.github }}" target="_blank">View GitHub repository</a></p>
+  {% endif %}
+
+
+  {% if page.images %}
+  <section class="container">
+    <h4>Project Screenshots</h4>
+
+    <!-- Carousel -->
+    <div class="glider-contain">
+      <div class="glider">
+        {% for img in page.images %}
+        <div>
+          <img src="{{ site.baseurl }}/assets/images/screenshots/{{ img }}" alt="">
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Navigation -->
+      <button aria-label="Previous" class="glider-prev">«</button>
+      <button aria-label="Next" class="glider-next">»</button>
+      <div id="dots"></div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Tech stack -->
+  {% if page.stack %}
+  <hr>
+  <div class="content">
+    <h4>Tools & Frameworks</h4>
+    <ul>
+      {% for itm in page.stack %}
+      <li>{{ itm }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <!-- Body -->
+  <div class="content">
+    <hr>
+    <h4>App Summary & Technical Highlights</h4>
+    {{ content }}
+  </div>
+
+</div>
+
+<script>
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: 4,
+    draggable: true,
+    dots: '#dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    },
+    slidesToScroll: 1,
+    rewind: true,           // optional, loops back
+    exactWidth: false,
+    responsive: [
+      {
+        // screens smaller than 768px
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        // screens smaller than 480px
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+</script>

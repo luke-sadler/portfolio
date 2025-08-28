@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+{%- include head.html -%}
+
+<body>
+
+  {%- include header.html -%}
+
+  <div class="py-5">
+    <div class="container page-content">
+      {{ content }}
+    </div>
+  </div>
+
+</body>
+
+<hr>
+<footer class="footer">
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/luke-sadler/" target="_blank" rel="noopener">
+      <img src="{{ site.baseurl }}/assets/social/linkedin.svg" alt="LinkedIn" width="24" height="24">
+      <span class="sr-only">LinkedIn</span>
+    </a>
+
+    <a href="https://www.instagram.com/luke_sadler_" target="_blank" rel="noopener">
+      <img src="{{ site.baseurl }}/assets/social/instagram.svg" alt="Instagram" width="24" height="24">
+      <span class="sr-only">Instagram</span>
+    </a>
+  </div>
+</footer>
+
+</html>

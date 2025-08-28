@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<section class="container">
+  <h1>Welcome</h1>
+  <p>
+    Thanks for visiting my portfolio. Here you’ll find an overview of my current and past projects,
+    along with some deeper technical insights for those interested.
+  </p>
+  <p>
+    If you’d like to know more or have any questions, please don’t hesitate to
+    <a href="https://www.linkedin.com/in/luke-sadler/">get in touch</a>.
+  </p>
+</section>
+
+<hr>
+
+<section class="container">
+  <h2>Projects</h2>
+
+  <div class="grid">
+    {% for project in site.projects %}
+    <article>
+      <a href="{{ site.baseurl }}{{ project.url }}">
+        {% if project.icon %}
+        <img class="rounded-icon" src="{{site.baseurl}}/assets/images/icons/{{ project.icon }}"
+          alt="{{ project.title }}">
+        {% endif %}
+        <p>
+          <h4>{{ project.title }}</h4>
+      </a>
+      <p>{{ project.tag | strip_html }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
