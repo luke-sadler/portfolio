@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "MOT Checker"
-appstore: "https://apps.apple.com/gb/app/mot-checker/id1478314114"
+# appstore: "https://apps.apple.com/gb/app/mot-checker/id1478314114"
 icon: mot.png
 images: 
   - /mot/image1.png
