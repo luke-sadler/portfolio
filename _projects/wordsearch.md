@@ -2,6 +2,7 @@
 layout: project
 title: "WordSearchKit"
 icon: wordsearch.png
+github: "https://github.com/mylogon341/WordSearchKit"
 images: 
   - /wordsearch/image1.png
 tag: "A Swift library for generating word search puzzles."
